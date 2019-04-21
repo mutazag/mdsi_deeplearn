@@ -2,6 +2,7 @@
 
 #%%
 import tensorflow as tf
+# tf.disable_eager_execution()
 
 #%% 
 a = 2
@@ -18,5 +19,16 @@ sess.close()
 
 
 #%%
+# a better way to deal with session 
+with tf.Session() as sess:
+    print(sess.run(c))
+
+#%%
 print("END")
+
+
+
+#%%
+
+
 
