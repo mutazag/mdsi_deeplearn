@@ -1,3 +1,4 @@
+#%% 
 # building NN from scratch using numpy and calculus 
 
 import numpy as np
@@ -25,7 +26,7 @@ import numpy as np
 # other functions for activation could be things like ReLU
 
 
-
+#%% 
 # def a sigmoid function -- used as activation to the last layer 
 def sigmoid(x): 
     return 1/(1 + np.exp(-x))
@@ -272,7 +273,7 @@ n_x = 2     #No. of neurons in first layer
 n_h = 2     #No. of neurons in hidden layer
 n_y = 1     #No. of neurons in output layer
 num_of_iters = 1000
-learning_rate = .0001
+learning_rate = .3
 
 
 
@@ -288,6 +289,7 @@ def predict_and_print(Xin, trained_parameters):
     # Print the result
     print('Neural Network prediction for example ({:d}, {:d}) is {:d}'.format(
     Xin[0][0], Xin[1][0], predict_y))
+    return predict_y
 
 
 X_test = np.array([[0],[0]])
